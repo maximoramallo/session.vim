@@ -1,0 +1,39 @@
+*session.txt*  Continuously updated session files
+
+Author:  Tim Pope <http://tpo.pe/>
+Repo:    https://github.com/tpope/vim-obsession
+License: Same terms as Vim itself (see |license|)
+
+USAGE                                           *session* *:Session*
+
+:Session {file}       Invoke |:mksession| on {file} and continue to keep it
+                        updated until Vim exits, triggering on the |BufEnter|
+                        and |VimLeavePre| autocommands.  If the file exists,
+                        it will be overwritten if and only if it looks like a
+                        session file.
+
+                        Set `g:session_no_bufenter` to disable saving the
+                        session on |BufEnter|, improving performance at the
+                        expense of safety.
+
+:Session {dir}        Invoke |:Session| on {dir}/Session.vim.  Use "." to
+                        write to a session file in the current directory.
+
+:Session              If session tracking is already in progress, pause it.
+                        Otherwise, resume tracking or create a new session in
+                        the current directory.
+
+:Session!             Stop session and delete the underlying session file.
+
+Loading a session created with |:Session| automatically resumes updates to
+that file.
+
+STATUS INDICATOR                                *session-status*
+
+                                                *SessionStatus()*
+Add %{SessionStatus()} to 'statusline', 'tabline', or 'titlestring' to get
+an indicator when Session is active or paused.  Pass an argument to override
+the text of the indicator and a second argument to override the text of the
+paused indictor.
+
+ vim:tw=78:et:ft=help:norl:
