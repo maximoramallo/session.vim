@@ -36,16 +36,7 @@ then simply copy and paste:
     git clone git://github.com/maximoramallo/session.vim.git
     vim -u NONE -c "helptags vim-session/doc" -c q
 
-## Self-Promotion
-
-Like session.vim?  Follow the repository on
-[GitHub](https://github.com/tpope/vim-obsession) and vote for it on
-[vim.org](http://www.vim.org/scripts/script.php?script_id=4472).  And if
-you're feeling especially charitable, follow [tpope](http://tpo.pe/) on
-[Twitter](http://twitter.com/tpope) and
-[GitHub](https://github.com/tpope).
-
 ## License
 
-Copyright © Tim Pope.  Distributed under the same terms as Vim itself.
+Distributed under the same terms as Vim itself.
 See `:help license`.
